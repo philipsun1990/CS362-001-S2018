@@ -38,30 +38,7 @@ public class CalDayTest
       String string1 = "\t --- 7/10/2018 --- \n --- -------- Appointments ------------ --- \n\n";
       assertTrue(string0.equals(string1));
   }
-  // @Test(timeout = 4000)
-  // public void test03()  throws Throwable  
-  // {
-  //     GregorianCalendar someday = new GregorianCalendar(2018, 5, 10);
-  //     CalDay day0 = new CalDay(someday);
-  //     Appt appt0 = new Appt(8, 5, 7, 6, 2018, "Meeting", "This is a meeting", "work@gmail.com");
-  //     Appt appt1 = new Appt(10, 5, 7, 6, 2018, "Meeting2", "This is a meeting", "work@gmail.com");
-  //     day0.addAppt(appt0);
-  //     day0.addAppt(appt1);
-  //     String string0 = day0.toString();
-  //     assertEquals("\t --- 7/10/2018 --- \n --- -------- Appointments ------------ --- \n" + "\t6/7/2018 at 8:5am ,Meeting, This is a meeting \n" + "\t6/7/2018 at 10:5am ,Meeting2, This is a meeting\n \n", string0);
-  // }
-  // @Test(timeout = 4000)
-  // public void test04()  throws Throwable  
-  // {
-  //     GregorianCalendar someday = new GregorianCalendar(2018, 5, 10);
-  //     CalDay day0 = new CalDay(someday);
-  //     Appt appt0 = new Appt(10, 5, 7, 6, 2018, "Meeting2", "This is a meeting", "work@gmail.com");
-  //     Appt appt1 = new Appt(8, 5, 7, 6, 2018, "Meeting", "This is a meeting", "work@gmail.com");
-  //     day0.addAppt(appt0);
-  //     day0.addAppt(appt1);
-  //     String string0 = day0.toString();
-  //     assertEquals("\t --- 7/10/2018 --- \n --- -------- Appointments ------------ --- \n" + "\t6/7/2018 at 8:5am ,Meeting, This is a meeting \n" + "\t6/7/2018 at 10:5am ,Meeting2, This is a meeting\n \n", string0);
-  // }
+
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
       GregorianCalendar someday = new GregorianCalendar(2018, 5, 10);
