@@ -77,8 +77,7 @@ public class CalDay {
 		if (appt.getValid()) {
 			for (int i = 0; i < getAppts().size(); i++) {
 				//Put the appointment in the correct order - finish this
-				if (((Appt)getAppts().get(i)).getStartHour() >
-										appt.getStartHour()) {
+				if (((Appt)getAppts().get(i)).getStartHour() > appt.getStartHour()) {
 					
 					getAppts().add(i, appt);
 					return;
@@ -221,7 +220,7 @@ public class CalDay {
 				
 				//figure AM/PM notation
 				hour = appointment.getStartHour();
-				if(hour>=12){
+				if(hour>12){
 					meridianString = "PM";
 				}
 				else{
