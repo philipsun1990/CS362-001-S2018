@@ -139,8 +139,8 @@ public class DataHandlerTest
     GregorianCalendar lastDay = new GregorianCalendar(2019, 2, 12);
     CalDay day1 = new CalDay(firstDay);
     CalDay day2 = new CalDay(lastDay);
-    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt1 = new Appt(12, 12, 28, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt1 = new Appt(12, 12, 28, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     int[] recurringDays = new int[0];
     int[] recurringDays1 = new int[0];
     appt0.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 1, 10);
@@ -159,8 +159,8 @@ public class DataHandlerTest
     GregorianCalendar lastDay = new GregorianCalendar(2018, 12, 29);
     CalDay day1 = new CalDay(firstDay);
     CalDay day2 = new CalDay(lastDay);
-    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt1 = new Appt(0, 9, 28, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt1 = new Appt(0, 9, 28, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day1.addAppt(appt0);
     day2.addAppt(appt1);
     one.saveAppt(appt0);
@@ -175,7 +175,7 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler();
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2019, 5, 25);
-    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");  
+    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");  
     int[] recurringDays = new int[0];
     appt0.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 2, 3);
     dh.saveAppt(appt0);
@@ -187,7 +187,7 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler();
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2018, 12, 25);
-    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com"); 
+    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com"); 
     int[] recurringDays = new int[1];
     recurringDays[0] = 1;
     appt0.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 10, 10);
@@ -200,7 +200,7 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler();
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2018, 12, 25);
-    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     int[] recurringDays = new int[0];
     appt0.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 2, 3);
     dh.saveAppt(appt0);
@@ -212,8 +212,8 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler("testdir1", false);
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2018, 12, 25);
-    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt3 = new Appt(12, 30, 20, -2, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt3 = new Appt(12, 30, 20, -2, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     int[] recurringDays = new int[0];
     appt0.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 2, 3);
     appt3.setValid();
@@ -234,7 +234,7 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler("Yolo2", true);
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2019, 12, 25);
-    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt0.setValid();
     assertNotNull(dh.getApptRange(firstDay, lastDay));
     assertFalse(dh.deleteAppt(appt0));
@@ -246,10 +246,10 @@ public class DataHandlerTest
     DataHandler dh = new DataHandler();
     GregorianCalendar firstDay = new GregorianCalendar(2018, 12, 20);
     GregorianCalendar lastDay = new GregorianCalendar(2020, 1, 25);
-    Appt appt0 = new Appt(1, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt1 = new Appt(1, 31, 21, 12, 2018, "HELLO", "Appointment at doctor", "dj@dj.com");
-    Appt appt2 = new Appt(1, 32, 22, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt3 = new Appt(1, 33, 23, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(1, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt1 = new Appt(1, 31, 21, 12, 2018, "HELLO", "Appointment at doctor", "sj@sj.com");
+    Appt appt2 = new Appt(1, 32, 22, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt3 = new Appt(1, 33, 23, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     int[] recurDays = new int[2];
     recurDays[0] = 1;
     recurDays[1] = 2;

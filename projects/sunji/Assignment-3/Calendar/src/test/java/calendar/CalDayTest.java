@@ -17,8 +17,8 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt1 = new Appt(0, 9, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt1 = new Appt(0, 9, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day.addAppt(appt0);
     day.addAppt(appt1);
     day.getAppts();
@@ -39,9 +39,9 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt0 = new Appt(13, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
-    Appt appt1 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt2 = new Appt(11, 30, 27, -1, 2018, "Birthday Party", "Party!!", "dj@dj.com");  
+    Appt appt0 = new Appt(13, 30, 27, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
+    Appt appt1 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt2 = new Appt(11, 30, 27, -1, 2018, "Birthday Party", "Party!!", "sj@sj.com");  
     appt0.setValid();
     appt1.setValid();
     appt2.setValid();
@@ -68,9 +68,9 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt1 = new Appt(13, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt2 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt3 = new Appt(11, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt1 = new Appt(13, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt2 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt3 = new Appt(11, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day.addAppt(appt1);
     day.addAppt(appt2);
     day.addAppt(appt3);
@@ -85,9 +85,9 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt2 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt3 = new Appt(11, 30, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt2 = new Appt(12, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt3 = new Appt(11, 30, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day.addAppt(appt1);
     day.addAppt(appt2);
     day.addAppt(appt3);
@@ -111,9 +111,9 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt2 = new Appt(12, 10, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt3 = new Appt(11, 1, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt2 = new Appt(12, 10, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt3 = new Appt(11, 1, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day.addAppt(appt1);
     day.addAppt(appt2);
     day.addAppt(appt3);
@@ -177,9 +177,9 @@ public class CalDayTest
   {
     GregorianCalendar cal = new GregorianCalendar(2018, 12, 27);
     CalDay day = new CalDay(cal);
-    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt2 = new Appt(12, 10, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
-    Appt appt3 = new Appt(11, 1, 27, 12, 2018, "Birthday Party", "Party!!", "dj@dj.com");
+    Appt appt1 = new Appt(12, 31, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt2 = new Appt(12, 10, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
+    Appt appt3 = new Appt(11, 1, 27, 12, 2018, "Birthday Party", "Party!!", "sj@sj.com");
     day.addAppt(appt1);
     day.addAppt(appt2);
     day.addAppt(appt3);

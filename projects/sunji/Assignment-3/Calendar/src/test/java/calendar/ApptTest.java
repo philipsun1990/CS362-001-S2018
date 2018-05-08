@@ -25,25 +25,25 @@ public class ApptTest  {
 @Test(timeout = 4000)
  public void test01()  throws Throwable  
  {
-    Appt appt = new Appt(12,30, 15, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt = new Appt(12,30, 15, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     // setvalid month branch
-    Appt appt0 = new Appt(12, 30, 15, -1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 15, -1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid year branch
-    Appt appt1 = new Appt(12, 30, 15, 11, 0, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt1 = new Appt(12, 30, 15, 11, 0, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid day branch
-    Appt appt2 = new Appt(12, 30, 0, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt2 = new Appt(12, 30, 0, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid day branch
-    Appt appt3 = new Appt(12, 30, 32, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt3 = new Appt(12, 30, 32, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid month branch
-    Appt appt4 = new Appt(12, 30, 20, 13, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt4 = new Appt(12, 30, 20, 13, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid hour branch
-    Appt appt5 = new Appt(-1, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt5 = new Appt(-1, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid hour branch
-    Appt appt6 = new Appt(24, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt6 = new Appt(24, 30, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid minute branch
-    Appt appt7 = new Appt(12, 61, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt7 = new Appt(12, 61, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     //setvalid minute branch
-    Appt appt8 = new Appt(12, -1, 20, 12, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, -1, 20, 12, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
 
     appt.setValid();
     appt0.setValid();
@@ -75,7 +75,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
  public void test02()  throws Throwable  
  {
-    Appt appt0 = new Appt(12, 30, 15, 11, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 15, 11, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     int hour = appt0.getStartHour();
     int minute = appt0.getStartMinute();
     int day = appt0.getStartDay();
@@ -93,7 +93,7 @@ public class ApptTest  {
     assertEquals(year, 2018);
     assertEquals(title, "Doctor");
     assertEquals(description, "Appointment at doctor");
-    assertEquals(email, "dj@dj.com");
+    assertEquals(email, "sj@sj.com");
     assertTrue(valid);
     assertTrue(appt0.hasTimeSet());
 
@@ -105,14 +105,14 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test03() throws Throwable 
   {
-    Appt appt0 = new Appt(12, 30, 15, 11, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(12, 30, 15, 11, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     assertTrue(appt0.isOn(15, 11, 2018));
   }
 
   @Test(timeout = 4000)
   public void test04() throws Throwable 
   {
-    Appt appt0 = new Appt(15, 11, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt0 = new Appt(15, 11, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     assertFalse(appt0.hasTimeSet());
   }
 
@@ -129,7 +129,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test06() throws Throwable 
   {
-    Appt appt8 = new Appt(12, 30, 5, 0, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 30, 5, 0, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt8.setValid();
     appt8.setStartMonth(2);
     assertFalse(appt8.getStartMonth() < 1);
@@ -138,17 +138,17 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test07()  throws Throwable  
   {
-    Appt appt8 = new Appt(12, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     assertNull(appt8.getXmlElement());
   }
 
   @Test(timeout = 4000)
   public void test08() throws Throwable 
   {
-    Appt appt8 = new Appt(0, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(0, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt8.setValid();
     assertTrue(appt8.getValid());
-    Appt appt7 = new Appt(23, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt7 = new Appt(23, 30, 5, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt7.setValid();
     assertTrue(appt7.getValid());
 
@@ -157,10 +157,10 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test09() throws Throwable 
   {
-    Appt appt8 = new Appt(12, 0, 5, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 0, 5, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt8.setValid();
     assertTrue(appt8.getValid());
-    Appt appt7 = new Appt(12, 59, 5, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt7 = new Appt(12, 59, 5, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt7.setValid();
     assertTrue(appt7.getValid());
 
@@ -173,11 +173,11 @@ public class ApptTest  {
     int startMonth = 1;
     int NumDaysInMonth = CalendarUtil.NumDaysInMonth(startYear, startMonth - 1);
     //test boundary where day = 1
-    Appt appt8 = new Appt(12, 30, 1, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 30, 1, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt8.setValid();
     assertTrue(appt8.getValid());
     //test boundary where day = numdaysinmonth
-    Appt appt7 = new Appt(12, 30, NumDaysInMonth, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt7 = new Appt(12, 30, NumDaysInMonth, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt7.setValid();
     assertTrue(appt7.getValid());
   }
@@ -185,7 +185,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test11() throws Throwable 
   {
-    Appt appt8 = new Appt(12, 30, 15, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 30, 15, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     int[] recurringDays = new int[1];
     recurringDays[0] = 1;
     appt8.setRecurrence(recurringDays, Appt.RECUR_BY_WEEKLY, 10, 10);
@@ -196,7 +196,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test12() throws Throwable 
   {
-    Appt appt8 = new Appt(12, 30, 15, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(12, 30, 15, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     assertNotNull(appt8.getRecurDays());
     
   }
@@ -204,7 +204,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test13() throws Throwable 
   {
-    Appt appt8 = new Appt(11, 00, 15, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com");
+    Appt appt8 = new Appt(11, 00, 15, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com");
     appt8.setValid();
     String testString = appt8.toString();
     assertEquals(testString, appt8.toString());
@@ -213,7 +213,7 @@ public class ApptTest  {
   @Test(timeout = 4000)
   public void test14() throws Throwable 
   {
-    Appt appt8 = new Appt(11, 00, 15, 1, 2018, "Doctor", "Appointment at doctor", "dj@dj.com"); 
+    Appt appt8 = new Appt(11, 00, 15, 1, 2018, "Doctor", "Appointment at doctor", "sj@sj.com"); 
     //wrong day and month but right year shoudl return false;
     assertFalse(appt8.isOn(12, 3, 2018));
     assertTrue(appt8.isOn(15,1,2018));
