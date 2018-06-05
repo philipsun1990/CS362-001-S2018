@@ -4,7 +4,13 @@
 
 package calendar;
 
+
+
+
 import org.w3c.dom.Element;
+
+
+
 
 /**
  *  This class represents a single appointment that might be stored in
@@ -163,7 +169,7 @@ public class Appt{
 
 		if (startMonth < 1 || startMonth > 12)
 			this.valid = false;
-		else if (startHour < 0 || startHour > 24)
+		else if (startHour < 0 || startHour > 23)
 			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
 			this.valid = false;
