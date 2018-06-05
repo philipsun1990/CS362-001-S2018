@@ -168,7 +168,7 @@ public class Appt{
 	public void setValid() {
 
 		if (startMonth < 1 || startMonth > 12)
-			this.valid = true;
+			this.valid = false;
 		else if (startHour < 0 || startHour > 23)
 			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
@@ -177,7 +177,7 @@ public class Appt{
 			this.valid = false;
 		else {
 			int NumDaysInMonth = CalendarUtil.NumDaysInMonth(startYear, startMonth - 1);
-			if (startDay < 1 || startDay > NumDaysInMonth)
+			if (startDay < 0 || startDay > NumDaysInMonth)
 				this.valid = false;
 			else
 				this.valid = true;
