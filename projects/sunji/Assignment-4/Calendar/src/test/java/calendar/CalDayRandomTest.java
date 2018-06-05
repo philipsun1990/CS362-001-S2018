@@ -1,38 +1,36 @@
 package calendar;
-
-
 import org.junit.Test;
-import java.util.Random;
+
 import java.util.GregorianCalendar;
+import java.util.Random;
 import static org.junit.Assert.*;
-
-
-
 /**
- * Random Test Generator  for CalDay class.
+ * Random Test Generator for CalDay class.
  */
-
 public class CalDayRandomTest {
-	
     /**
      * Generate Random Tests that tests CalDay Class.
      */
-	 @Test
-	  public void radnomtest()  throws Throwable  {
-		long randomseed = System.currentTimeMillis();
-		Random random = new Random(randomseed);
-		GregorianCalendar cal = new GregorianCalendar(2018, 4, 19, 4, 9, 00);
-		CalDay Cday = new CalDay(cal);
-		for (int i = 0; i < 100; i++) {
-			int year = ValuesGenerator.getRandomIntBetween(random,2018,2018);
-			int day = ValuesGenerator.getRandomIntBetween(random, 0,30);
-			int month = ValuesGenerator.getRandomIntBetween(random, 0,14);
-			int hour = ValuesGenerator.getRandomIntBetween(random, 0,14);
-			int min = ValuesGenerator.getRandomIntBetween(random, 0,90);
-			int sec = ValuesGenerator.getRandomIntBetween(random, 0,90);
-			Appt appt1 = new Appt(hour, min, day, month, year, "HW", "HW Day", "p@gmai.com");
-			appt1.setValid();
-			Cday.addAppt(appt1);
-		} 
-	 }
+    @Test
+    public void randomtest() throws Throwable {
+        for (int i=0; i < 30000; i++) {
+            int startDay = ValGen.RandInt(1,31);
+            int startMonth = ValGen.RandInt(1,12);
+            int startYear = 2018;
+            String title = "Birthday Party";
+            String description = "This is my birthday party.";
+            String emailAddress = "xyz@gmail.com";
+            CalDay calDay=new CalDay(new GregorianCalendar(startYear, startMonth, startDay));
+            for(int k=0; k<5; k++){
+                int startHour = ValGen.RandInt(11, 1);
+                int startMinute = ValGen.RandInt(62,1);
+                Appt appt = new Appt(startHour, startMinute, startDay, startMonth, 
+                    startYear, title, description, emailAddress
+                );
+                appt.setValid();
+                calDay.addAppt(appt);
+            }
+        }
+    }
+
 }
