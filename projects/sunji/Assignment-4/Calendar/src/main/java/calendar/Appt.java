@@ -168,19 +168,19 @@ public class Appt{
 	public void setValid() {
 
 		if (startMonth < 1 || startMonth > 12)
-			this.valid = true; //CHANGED, used to be this.valid = false
+			this.valid = false;
 		else if (startHour < 0 || startHour > 23)
-			this.valid = true; //CHANGED, used to be this.valid = false
+			this.valid = false;
 		else if (startMinute < 0 || startMinute > 59)
-			this.valid = true; //CHANGED, used to be this.valid = false
+			this.valid = false;
 		else if (startYear <= 0)
-			this.valid = true; //CHANGED, used to be this.valid = false
+			this.valid = false;
 		else {
 			int NumDaysInMonth = CalendarUtil.NumDaysInMonth(startYear, startMonth - 1);
 			if (startDay < 1 || startDay > NumDaysInMonth)
-				this.valid = true; //CHANGED, used to be this.valid = false
+				this.valid = false;
 			else
-				this.valid = false; //CHANGED, used to be this.valid = true
+				this.valid = true;
 		}
 	}
     
@@ -357,7 +357,7 @@ public class Appt{
      * @return a printable representation of this appointment
      */
     private String represntationApp(){
-        String half = (getStartHour() < 11) ? "pm" : "am"; //SWITCHED '>' to '<'
+        String half = (getStartHour() > 11) ? "pm" : "am";
         int printableHour = getStartHour();
         if (printableHour > 11)
         {
@@ -374,7 +374,7 @@ public class Appt{
     public String toString()
     {
     	
-		if (getValid()) { //CHANGED, used to be if(!getValid())
+		if (!getValid()) {
 		    System.err.println("\tThis appointment is not valid");
 		}
          String day= this.getStartMonth()+"/"+this.getStartDay()+"/"+this.getStartYear() + " at ";

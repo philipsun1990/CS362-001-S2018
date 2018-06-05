@@ -331,12 +331,12 @@ public class DataHandler {
         if (!appt.isRecurring()) {
             return null;
         }
-
+        
         //Leave the original day untouched.
         GregorianCalendar nextDay = (GregorianCalendar)day.clone();
         
         //This depends on the recurrence settings
-        switch (appt.getRecurBy()-1) { //CHANGED, used to be switch (appt.getRecurBy()) {
+        switch (appt.getRecurBy()) {
             case Appt.RECUR_BY_WEEKLY:
                 int[] recurDays = appt.getRecurDays();
                 
@@ -593,4 +593,3 @@ public class DataHandler {
     
 
 }
-
