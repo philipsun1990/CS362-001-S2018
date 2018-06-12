@@ -63,7 +63,6 @@ public class UrlValidatorTest extends TestCase {
       for (int i=0;i<testUrlAuthority.length;i++) {
             String testUrl = baseUrl + testUrlAuthority[i].item;
             boolean res = uVal.isValid(testUrl);
-            //assertEquals(testUrlAuthority[i].valid, res);
             if(res == testUrlAuthority[i].valid){
                System.out.println(testUrl + " Passed authorities test");
             }else{
@@ -85,7 +84,6 @@ public class UrlValidatorTest extends TestCase {
       for (int i=0;i<testUrlPort.length;i++) {
             String testUrl = baseUrl + testUrlPort[i].item;
             boolean res = uVal.isValid(testUrl);
-            //assertEquals(testUrlPort[i].valid, res);
             if(res == testUrlPort[i].valid){
                System.out.println(testUrl + " Passed ports test");
             }else{
@@ -106,7 +104,6 @@ public class UrlValidatorTest extends TestCase {
       for (int i=0;i<testPath.length;i++) {
             String testUrl = baseUrl + testPath[i].item;
             boolean res = uVal.isValid(testUrl);
-            //assertEquals(testPath[i].valid, res);
             if(res == testPath[i].valid){
                System.out.println(testUrl + " Passed path test");
             }else{
@@ -127,7 +124,6 @@ public class UrlValidatorTest extends TestCase {
       for (int i=0;i<testUrlQuery.length;i++) {
             String testUrl = baseUrl + testUrlQuery[i].item;
             boolean res = uVal.isValid(testUrl);
-            //assertEquals(testUrlQuery[i].valid, res);
             if(res == testUrlQuery[i].valid){
                System.out.println(testUrl + " Passed query test");
             }else{
@@ -189,10 +185,8 @@ public class UrlValidatorTest extends TestCase {
                    testUrl = schemes[i] + authority[j] + port[k] + path[l] + query[m];
                    
                    if(i < 5 && j < 5 && k < 4 && l < 4 && m < 3) {
-                    // result = url.isValid(testUrl);
                      System.out.print(testUrl);
                      System.out.print("\t\t\t");
-                   //  System.out.print(result);
                      System.out.print("\n");
                    }
                    System.out.print(counter);
@@ -204,7 +198,7 @@ public class UrlValidatorTest extends TestCase {
 
 
    }
-   
+
    public static void main(String args[])
    {
       UrlValidatorTest test = new UrlValidatorTest("Url Test");
