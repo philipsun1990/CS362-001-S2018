@@ -26,19 +26,11 @@ public class UrlValidatorTest extends TestCase {
    {
    //You can use this function to implement your manual testing	   
      UrlValidator url = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-     //valid URLS
      assertTrue(url.isValid("http://www.google.com"));
      assertTrue(url.isValid("http://google.com"));
-     //FAILURE:  assertTrue(url.isValid("google.com"));
-     //ERROR:    assertTrue(url.isValid("https://www.google.com/search?q=pie&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiRhp7M1rPbAhWtHjQIHbUfB34Q_AUICigB&biw=1536&bih=700&dpr=1.25#imgrc=Ml01ptT80Q0DCM"));
-     //ERROR:    assertTrue(url.isValid("ftp://www.example.com"));
-     
-     //invalid URLS
      assertFalse(url.isValid("hslgkjslguiod"));
      assertFalse(url.isValid("something@this@you"));
      assertFalse(url.isValid(""));
-     //ERROR:    assertFalse(url.isValid("htp://google.com"));
-     //FAILURE:  assertFalse(url.isValid("http://google..com"));
      assertFalse(url.isValid("textfile.txt"));
    }
    
@@ -212,15 +204,7 @@ public class UrlValidatorTest extends TestCase {
 
 
    }
-
    
-   
-   /*
-    * main() method runs the tests on UrlValidator.isValid()
-    * 
-    * args[1] == true sets printStatus = true
-    * args[2] == true sets printIndex = true
-    */
    public static void main(String args[])
    {
       UrlValidatorTest test = new UrlValidatorTest("Url Test");
